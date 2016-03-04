@@ -7,7 +7,7 @@
     <description>A Cordova plugin that displays an alert popup dialog</description>
 
     <engines>
-        <engine name="cordova" version=">=3.6.0" />
+        <engine name="cordova" version=">=5.1.0" />
     </engines>
 
     <js-module src="www/alert.js" name="Alert">
