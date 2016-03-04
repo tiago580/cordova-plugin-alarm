@@ -22,19 +22,19 @@ public class Alert extends CordovaPlugin{
     }
 
     private synchronized void alert(final String title, final String message, final String buttonLabel, final CallbackContext callbackContext){
-        AlertDialog alertDialog = new AlertDialog.Builder(cordova.getActivity());
-        alertDialog.setTitle(title);
-        alertDialog.setMessage(message);
-        alertDialog.setCancelable(false);
-        alertDialog.setButton(DialogInterface.BUTTON_NEUTRAL, buttonLabel, new AlertDialog.OnClickListener(){
+         new AlertDialog.Builder(cordova.getActivity())
+        .setTitle(title)
+        .setMessage(message)
+        .setCancelable(false)
+        .setNeutralButton(buttonLabel, new AlertDialog.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, 0));
             }
-        });
-        alertDialog.create();
-        alertDialog.show();
+        })
+        .create()
+        .show();
 
 
     }
