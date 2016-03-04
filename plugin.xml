@@ -6,17 +6,13 @@
     <name>Alert</name>
     <description>A Cordova plugin that displays an alert popup dialog</description>
 
-    <engines>
-        <engine name="cordova" version=">=5.1.0" />
-    </engines>
-
     <js-module src="www/alert.js" name="Alert">
         <clobbers target="Alert" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
+        <config-file target="config.xml" parent="/*">
             <feature name="Alert">
                 <param name="android-package" value="br.com.farit.alert.Alert" />
             </feature>
